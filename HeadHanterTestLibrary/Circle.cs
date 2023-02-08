@@ -1,11 +1,9 @@
-﻿using System.Runtime.ConstrainedExecution;
-
-namespace HeadHanterTestLibrary
+﻿namespace HeadHanterTestLibrary
 {
     public class Circle : Shape //Наследуемый класс круг
     {
         List<double> sside = new List<double>();
-        public Circle(params double[] side)
+        public Circle(List<double> side)
         {
             sside.Add(side[0]);
         }

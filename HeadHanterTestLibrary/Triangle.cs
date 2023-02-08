@@ -1,11 +1,9 @@
-﻿using System.Runtime.ConstrainedExecution;
-
-namespace HeadHanterTestLibrary
+﻿namespace HeadHanterTestLibrary
 {
     public class Triangle : Shape
     {
         List <double> sside = new List<double>();
-        public Triangle(params double[] side)
+        public Triangle(List<double> side)
         {
             for (int i = 0; i < 3; i++)
             {
