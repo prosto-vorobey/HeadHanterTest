@@ -1,22 +1,26 @@
-﻿using System;
-using System.Drawing;
-
-namespace HeadHanterTestLibrary
+﻿namespace HeadHanterTestLibrary
 {
     public class NoTypeShape
     {
-        public NoTypeShape() { }
-        public double GetArea (params double[] side)
+        List <double> sside = new List<double>();
+        public NoTypeShape( List<double> side)
+        {
+            for (int i = 0; i < side.Count; i++)
+            {
+                sside.Add(side[i]);
+            }
+        }
+        public double GetArea()
         {
             Shape sh;
-            switch (side.Length)
+            switch (sside.Count)
             {
                 case 1:
-                    sh = new Circle();
-                    return sh.GetArea(side);
+                    sh = new Circle(sside);
+                    return sh.GetArea();
                 case 3:
-                    sh = new Triangle();
-                    return sh.GetArea(side);
+                    sh = new Triangle(sside);
+                    return sh.GetArea();
                 default:
                     return 0;
             }
