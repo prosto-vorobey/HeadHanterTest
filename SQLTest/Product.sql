@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Product]
+(
+	[ID] INT NOT NULL PRIMARY KEY,
+	[name] NVARCHAR(255) NOT NULL
+)
